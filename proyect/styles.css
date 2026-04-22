@@ -1,0 +1,246 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    background: linear-gradient(to right, #1f2c3a, #3fa3a6);
+    color: white;
+    padding: 40px 60px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    background: orange;
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+}
+
+.nombre {
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-text {
+    max-width: 520px;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    white-space: nowrap;
+}
+
+.hero-text span {
+    color: orange;
+}
+
+.hero-text p {
+    margin-top: 10px;
+    color: #e0e0e0;
+}
+
+
+.hero-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid white;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.sobre {
+    background: #f2f2f2;
+    padding: 80px 60px;
+}
+
+.sobre-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.etiquetas {
+    background: rgba(255, 100, 100, 0.2);
+    padding: 6px 14px;
+    border-radius: 6px;
+    display: flex;
+    gap: 8px;
+}
+
+.etiquetas span {
+    color: #d94c4c;
+    font-size: 12px;
+    font-family: monospace;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.titulo h2 {
+    font-size: 28px;
+}
+
+.linea {
+    width: 40px;
+    height: 3px;
+    background: orange;
+    margin: 6px auto;
+}
+
+.sub {
+    color: gray;
+    font-size: 14px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.texto {
+    width: 60%;
+}
+
+.texto p {
+    margin-bottom: 20px;
+}
+
+blockquote {
+    border-left: 4px solid orange;
+    padding-left: 10px;
+    font-style: italic;
+}
+
+.datos {
+    width: 320px;
+    background: #f3f3f3;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+
+
+.habilidades {
+    background: #f2f2f2;
+    padding: 80px 60px;
+}
+
+
+.tabla table {
+    width: 100%;
+    max-width: 1100px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tabla th {
+    background: #243b55;
+    color: white;
+    padding: 14px;
+    text-align: left;
+}
+
+.tabla td {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+
+.barra {
+    height: 8px;
+    background: #ddd;
+    border-radius: 10px;
+    position: relative;
+}
+
+.barra::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.html::after { width: 90%; background: #1f3c88; }
+.css::after { width: 75%; background: #27ae60; }
+.js::after { width: 65%; background: #f39c12; }
+.git::after { width: 60%; background: #8e44ad; }
+.react::after { width: 50%; background: #e74c3c; }
+
+
+.cards {
+    display: flex;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+}
+
+.card ul, 
+.card ol {
+    margin-top: 10px;
+    padding-left: 20px;
+}

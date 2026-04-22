@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Portafolio Tadich</title>
+
+<style>
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    background: linear-gradient(to right, #1f2c3a, #3fa3a6);
+    color: white;
+    padding: 40px 60px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    background: orange;
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+}
+
+.nombre {
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-text {
+    max-width: 520px;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    white-space: nowrap;
+}
+
+.hero-text span {
+    color: orange;
+}
+
+.hero-text p {
+    margin-top: 10px;
+    color: #e0e0e0;
+}
+
+
+.hero-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid white;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.sobre {
+    background: #f2f2f2;
+    padding: 80px 60px;
+}
+
+.sobre-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.etiquetas {
+    background: rgba(255, 100, 100, 0.2);
+    padding: 6px 14px;
+    border-radius: 6px;
+    display: flex;
+    gap: 8px;
+}
+
+.etiquetas span {
+    color: #d94c4c;
+    font-size: 12px;
+    font-family: monospace;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.titulo h2 {
+    font-size: 28px;
+}
+
+.linea {
+    width: 40px;
+    height: 3px;
+    background: orange;
+    margin: 6px auto;
+}
+
+.sub {
+    color: gray;
+    font-size: 14px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.texto {
+    width: 60%;
+}
+
+.texto p {
+    margin-bottom: 20px;
+}
+
+blockquote {
+    border-left: 4px solid orange;
+    padding-left: 10px;
+    font-style: italic;
+}
+
+.datos {
+    width: 320px;
+    background: #f3f3f3;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+
+.habilidades {
+    background: #f2f2f2;
+    padding: 80px 60px;
+}
+
+.tabla table {
+    width: 100%;
+    max-width: 1100px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tabla th {
+    background: #243b55;
+    color: white;
+    padding: 14px;
+    text-align: left;
+}
+
+.tabla td {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.barra {
+    height: 8px;
+    background: #ddd;
+    border-radius: 10px;
+    position: relative;
+}
+
+.barra::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.html::after { width: 90%; background: #1f3c88; }
+.css::after { width: 75%; background: #27ae60; }
+.js::after { width: 65%; background: #f39c12; }
+.git::after { width: 60%; background: #8e44ad; }
+.react::after { width: 50%; background: #e74c3c; }
+
+.cards {
+    display: flex;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+}
+
+.card ul, .card ol {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="nav-left">
+            <span class="logo">TN</span>
+            <span class="nombre">Tadich Navarro</span>
+        </div>
+
+        <ul>
+            <li><a href="#sobre">Sobre mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li>Proyectos</li>
+            <li>Contacto</li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Hola, soy <span>Tadich Navarro</span></h1>
+            <p>Estudiante de Desarrollo Web</p>
+            <p>Me gusta crear páginas modernas y bien diseñadas.</p>
+        </div>
+
+        <div class="hero-img">
+            <img src="foto.jpg" alt="perfil">
+        </div>
+    </div>
+</header>
+
+
+<section class="sobre" id="sobre">
+
+    <div class="sobre-header">
+
+        <div class="etiquetas">
+            <span>&lt;section&gt;</span>
+            <span>&lt;article&gt;</span>
+            <span>&lt;aside&gt;</span>
+            <span>&lt;footer&gt;</span>
+        </div>
+
+        <div class="titulo">
+            <h2>Sobre Mí</h2>
+            <div class="linea"></div>
+            <p class="sub">Conóceme un poco más</p>
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="texto">
+            <p>
+                Mi nombre es Tadich Navarro Reyes y mi enfoque principal es el desarrollo web. Desde que inicié en este mundo, he encontrado gran satisfacción en construir plataformas digitales que logren el equilibrio perfecto entre la funcionalidad técnica y un diseño visual atractivo.
+            </p>
+
+            <p>
+                Me encuentro perfeccionando mis habilidades en HTML5, CSS3 y JavaScript, con el firme propósito de consolidarme como desarrollador Front-end. Disfruto enfrentarme a nuevos retos técnicos y creo firmemente que el trabajo en equipo es la mejor herramienta para el crecimiento profesional y la innovación constante.
+            </p>
+
+            <blockquote>
+                «El trabajo ocupará una gran parte de tu vida, la mejor forma de lidiar con ello, es encontrar algo que realmente ames.»
+                <br><strong>- Steve Jobs</strong>
+            </blockquote>
+        </div>
+
+        <aside class="datos">
+            <h3>Datos Personales</h3>
+            <p><strong>Edad:</strong> 19</p>
+            <p><strong>Ciudad:</strong> Santiago</p>
+            <p><strong>Email:</strong> tadi@email.com</p>
+            <p><strong>Carrera:</strong> Programación</p>
+            <p><strong>Intereses:</strong> Diseño UI/UX, Gaming</p>
+        </aside>
+
+    </div>
+
+</section>
+
+
+<section class="habilidades" id="habilidades">
+
+    <div class="sobre-header">
+        <div class="etiquetas">
+            <span>&lt;table&gt;</span>
+            <span>&lt;col&gt;</span>
+            <span>&lt;ul&gt;</span>
+            <span>&lt;ol&gt;</span>
+        </div>
+
+        <div class="titulo">
+            <h2>Habilidades</h2>
+            <div class="linea"></div>
+            <p class="sub">Tecnologías y competencias</p>
+        </div>
+    </div>
+
+    <div class="tabla">
+        <table>
+            <tr>
+                <th>Tecnología</th>
+                <th>Nivel</th>
+                <th>Dominio</th>
+            </tr>
+
+            <tr>
+                <td>HTML5</td>
+                <td>Avanzado</td>
+                <td><div class="barra html"></div></td>
+            </tr>
+
+            <tr>
+                <td>CSS3</td>
+                <td>Intermedio-Alto</td>
+                <td><div class="barra css"></div></td>
+            </tr>
+
+            <tr>
+                <td>JavaScript</td>
+                <td>Intermedio</td>
+                <td><div class="barra js"></div></td>
+            </tr>
+
+            <tr>
+                <td>Git / GitHub</td>
+                <td>Intermedio</td>
+                <td><div class="barra git"></div></td>
+            </tr>
+
+            <tr>
+                <td>React</td>
+                <td>Básico</td>
+                <td><div class="barra react"></div></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Competencias Técnicas</h3>
+            <ul>
+                <li>Maquetación responsiva</li>
+                <li>Control de versiones con Git</li>
+                <li>Diseño con Flexbox y Grid</li>
+                <li>Accesibilidad web (WCAG)</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Ruta de Aprendizaje</h3>
+            <ol>
+                <li>HTML5 y CSS3 (actual)</li>
+                <li>JavaScript ES6+</li>
+                <li>React.js</li>
+                <li>Node.js y Express</li>
+            </ol>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>
+   
