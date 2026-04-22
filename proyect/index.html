@@ -1,10 +1,347 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Portafolio Tadich</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<title>Portafolio Tadich</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: linear-gradient(to right, #1f2c3a, #3fa3a6);
+    color: white;
+    padding: 40px 60px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    background: orange;
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+}
+
+.nombre {
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-text {
+    max-width: 520px;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    white-space: nowrap;
+}
+
+.hero-text span {
+    color: orange;
+}
+
+.hero-text p {
+    margin-top: 10px;
+    color: #e0e0e0;
+}
+
+.hero-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid white;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sobre {
+    background: #f2f2f2;
+    padding: 80px 60px;
+}
+
+.sobre-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.etiquetas {
+    background: rgba(255, 100, 100, 0.2);
+    padding: 6px 14px;
+    border-radius: 6px;
+    display: flex;
+    gap: 8px;
+}
+
+.etiquetas span {
+    color: #d94c4c;
+    font-size: 12px;
+    font-family: monospace;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.titulo h2 {
+    font-size: 28px;
+}
+
+.linea {
+    width: 40px;
+    height: 3px;
+    background: orange;
+    margin: 6px auto;
+}
+
+.sub {
+    color: gray;
+    font-size: 14px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.texto {
+    width: 60%;
+}
+
+.texto p {
+    margin-bottom: 20px;
+}
+
+blockquote {
+    border-left: 4px solid orange;
+    padding-left: 10px;
+    font-style: italic;
+}
+
+.datos {
+    width: 320px;
+    background: #f3f3f3;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.habilidades {
+    background: #f2f2f2;
+    padding: 80px 60px;
+}
+
+.tabla table {
+    width: 100%;
+    max-width: 1100px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tabla th {
+    background: #243b55;
+    color: white;
+    padding: 14px;
+    text-align: left;
+}
+
+.tabla td {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.barra {
+    height: 8px;
+    background: #ddd;
+    border-radius: 10px;
+    position: relative;
+}
+
+.barra::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.html::after { width: 90%; background: #1f3c88; }
+.css::after { width: 75%; background: #27ae60; }
+.js::after { width: 65%; background: #f39c12; }
+.git::after { width: 60%; background: #8e44ad; }
+.react::after { width: 50%; background: #e74c3c; }
+
+.cards {
+    display: flex;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+}
+
+.card ul, .card ol {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+#proyectos {
+    background: #ffffff;
+    padding: 80px 60px;
+}
+
+#proyectos h2 {
+    font-size: 28px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+}
+
+#proyectos h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: orange;
+}
+
+#proyectos > p {
+    text-align: center;
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.tarjeta-proyecto {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
+    margin: 0;
+}
+
+.icono-proyecto {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: white;
+}
+
+.color-1 { background: linear-gradient(135deg, #0052D4, #4364F7); }
+.color-2 { background: linear-gradient(135deg, #C33764, #D885A3); }
+.color-3 { background: linear-gradient(135deg, #1A2980, #26D0CE); }
+.color-4 { background: linear-gradient(135deg, #1D976C, #93F9B9); }
+.color-5 { background: linear-gradient(135deg, #EB3349, #F45C43); }
+.color-6 { background: linear-gradient(135deg, #AA076B, #61045F); }
+
+.tarjeta-proyecto figcaption {
+    padding: 25px;
+}
+
+.tipo-proyecto {
+    font-size: 0.85rem;
+    color: #888;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.tarjeta-proyecto h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.tarjeta-proyecto p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.link-repo {
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+</style>
 </head>
+
 <body>
 
 <header>
@@ -15,14 +352,13 @@
         </div>
 
         <ul>
-            <li>Sobre mí</li>
-            <li>Habilidades</li>
-            <li>Proyectos</li>
-            <li>Contacto</li>
+            <li><a href="#sobre">Sobre mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
 
-   
     <div class="hero">
         <div class="hero-text">
             <h1>Hola, soy <span>Tadich Navarro</span></h1>
@@ -36,11 +372,8 @@
     </div>
 </header>
 
-<section class="sobre">
-
-
+<section class="sobre" id="sobre">
     <div class="sobre-header">
-
         <div class="etiquetas">
             <span>&lt;section&gt;</span>
             <span>&lt;article&gt;</span>
@@ -53,18 +386,13 @@
             <div class="linea"></div>
             <p class="sub">Conóceme un poco más</p>
         </div>
-
     </div>
 
     <div class="container">
-
         <div class="texto">
-            <p>
-                Mi nombre es Tadich Navarro Reyes y mi enfoque principal es el desarrollo web. Desde que inicié en este mundo, he encontrado gran satisfacción en construir plataformas digitales que logren el equilibrio perfecto entre la funcionalidad técnica y un diseño visual atractivo.
-            </p>
+            <p>Mi nombre es Tadich Navarro Reyes y mi enfoque principal es el desarrollo web. Desde que inicié en este mundo, he encontrado gran satisfacción en construir plataformas digitales que logren el equilibrio perfecto entre la funcionalidad técnica y un diseño visual atractivo.</p>
 
-            <p>
-                Me encuentro perfeccionando mis habilidades en HTML5, CSS3 y JavaScript, con el firme propósito de consolidarme como desarrollador Front-end. Disfruto enfrentarme a nuevos retos técnicos y creo firmemente que el trabajo en equipo es la mejor herramienta para el crecimiento profesional y la innovación constante.
+            <p>Me encuentro perfeccionando mis habilidades en HTML5, CSS3 y JavaScript, con el firme propósito de consolidarme como desarrollador Front-end. Disfruto enfrentarme a nuevos retos técnicos y creo firmemente que el trabajo en equipo es la mejor herramienta para el crecimiento profesional y la innovación constante.</p>
 
             <blockquote>
                 «El trabajo ocupará una gran parte de tu vida, la mejor forma de lidiar con ello, es encontrar algo que realmente ames.»
@@ -80,13 +408,207 @@
             <p><strong>Carrera:</strong> Programación</p>
             <p><strong>Intereses:</strong> Diseño UI/UX, Gaming</p>
         </aside>
-
     </div>
-
 </section>
 
-</body>
-</html>
+<section class="habilidades" id="habilidades">
+    <div class="sobre-header">
+        <div class="etiquetas">
+            <span>&lt;table&gt;</span>
+            <span>&lt;col&gt;</span>
+            <span>&lt;ul&gt;</span>
+            <span>&lt;ol&gt;</span>
+        </div>
+
+        <div class="titulo">
+            <h2>Habilidades</h2>
+            <div class="linea"></div>
+            <p class="sub">Tecnologías y competencias</p>
+        </div>
+    </div>
+
+    <div class="tabla">
+        <table>
+            <tr>
+                <th>Tecnología</th>
+                <th>Nivel</th>
+                <th>Dominio</th>
+            </tr>
+            <tr>
+                <td>HTML5</td>
+                <td>Avanzado</td>
+                <td><div class="barra html"></div></td>
+            </tr>
+            <tr>
+                <td>CSS3</td>
+                <td>Intermedio-Alto</td>
+                <td><div class="barra css"></div></td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>Intermedio</td>
+                <td><div class="barra js"></div></td>
+            </tr>
+            <tr>
+                <td>Git / GitHub</td>
+                <td>Intermedio</td>
+                <td><div class="barra git"></div></td>
+            </tr>
+            <tr>
+                <td>React</td>
+                <td>Básico</td>
+                <td><div class="barra react"></div></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Competencias Técnicas</h3>
+            <ul>
+                <li>Maquetación responsiva</li>
+                <li>Control de versiones con Git</li>
+                <li>Diseño con Flexbox y Grid</li>
+                <li>Accesibilidad web (WCAG)</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Ruta de Aprendizaje</h3>
+            <ol>
+                <li>HTML5 y CSS3 (actual)</li>
+                <li>JavaScript ES6+</li>
+                <li>React.js</li>
+                <li>Node.js y Express</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section id="proyectos">
+    <h2>Proyectos</h2>
+    <p>Algunos de mis trabajos</p>
+    <div class="grid-proyectos">
+
+        <figure class="tarjeta-proyecto">
+            <div class="icono-proyecto">
+    <img src="proyecto1.jpg" alt="Proyecto">
+</div>/
+            <figcaption>
+                <span class="tipo-proyecto">Proyecto web - Landing page</span>
+                <h3>Landing Page</h3>
+                <p>Página de aterrizaje para producto digital con diseño moderno.</p>
+                <a href="#" class="link-repo">Ver repositorio →</a>
+            </figcaption>
+        </figure>
+
+        <figure class="tarjeta-proyecto">
+            <div class="icono-proyecto color-2">
+                <img src="proyecto2.jpg" alt="Proyecto" />
+            </div>
+            <figcaption>
+                <span class="tipo-proyecto">Proyecto web - Blog personal</span>
+                <h3>Blog Personal</h3>
+                <p>Blog responsivo con sistema de artículos y categorías.</p>
+                <a href="#" class="link-repo">Ver repositorio →</a>
+            </figcaption>
+        </figure>
+
+        <figure class="tarjeta-proyecto">
+            <div class="icono-proyecto color-3">
+                <img src="proyecto3.jpg" alt="Proyecto" />
+            </div>
+            <figcaption>
+                <span class="tipo-proyecto">Proyecto web - Dashboard</span>
+                <h3>Dashboard Admin</h3>
+                <p>Panel de administración con gráficos y tablas de datos.</p>
+                <a href="#" class="link-repo">Ver repositorio →</a>
+            </figcaption>
+        </figure>
+
+        <figure class="tarjeta-proyecto">
+            <div class="icono-proyecto color-4">
+                <img src="proyecto4.jpg" alt="Proyecto" />
+            </div>
+            <figcaption>
+                <span class="tipo-proyecto">Proyecto web - Portafolio</span>
+                <h3>Portafolio Personal</h3>
+                <p>Mi sitio personal para mostrar mis proyectos y habilidades.</p>
+                <a href="#" class="link-repo">Ver repositorio →</a>
+            </figcaption>
+        </figure>
+
+        <figure class="tarjeta-proyecto">
+            <div class="icono-proyecto color-5">
+                <img src="proyecto5.jpg" alt="Proyecto" />
+            </div>
+            <figcaption>
+                <span class="tipo-proyecto">Proyecto web - E-commerce</span>
+                <h3>Tienda Online</h3>
+                <p>Simulación de tienda online con catálogo de productos.</p>
+                <a href="#" class="link-repo">Ver repositorio →</a>
+            </figcaption>
+        </figure>
+
+        <figure class="tarjeta-proyecto">
+            <div class="icono-proyecto color-6">
+                <img src="proyecto6.jpg" alt="Proyecto" />
+            </div>
+            <figcaption>
+                <span class="tipo-proyecto">Proyecto web - Portfolio</span>
+                <h3>Portfolio Creativo</h3>
+                <p>Portfolio para mostrar trabajos creativos y artísticos.</p>
+                <a href="#" class="link-repo">Ver repositorio →</a>
+            </figcaption>
+
+
+<section class="contacto" id="contacto">
+    <h2>Contacto</h2>
+    <p class="sub">Enviame un mensaje</p>
+
+    <form>
+        <label>Nombre Completo</label>
+        <input type="text" placeholder="Tu nombre" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="tu@email.com" required>
+
+        <label>Asunto</label>
+        <select required>
+            <option value="">Selecciona un asunto</option>
+            <option>Consulta</option>
+            <option>Trabajo</option>
+            <option>Proyecto</option>
+            <option>Otro</option>
+        </select>
+
+        <label>Mensaje</label>
+        <textarea placeholder="Escribe tu mensaje aqui" required></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+    </form>
+
+    <div class="info-contacto">
+        <h3>Información de contacto</h3>
+        <p>📧 tadichnavarro@email.com</p>
+        <p>📍 Santiago, Chile</p>
+        <p>📱 +56 9 8765 4321</p>
+        <p>🌐 github.com/tachiwx</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="redes">
+        <a href="#">GH</a>
+        <a href="#">LI</a>
+        <a href="#">TW</a>
+        <a href="#">IG</a>
+    </div>
+
+    <p>© 2026 Tadich Navarro. Todos los derechos reservados</p>
+    <p>Mi proyecto. Tadich Navarro</p>
+</footer>
+
 
 
 
